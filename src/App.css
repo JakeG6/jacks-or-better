@@ -1,38 +1,126 @@
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-color: #35a81b;
+  background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+#bottomRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  align-items: flex-end;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.black {
+  color: black;
+}
+
+.betValue {
+  box-shadow:inset 0px 0px 15px 3px #35a81b;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.5);
+	background-color:transparent;
+	border-radius:50%;
+	display:inline-block;
+  color:#ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	font-family:'Lobster', serif;
+  font-size:2em;
+  height: 2em;
+	padding:6px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #5b8a3c;
+  width: 2em;
+}
+
+.betLogo {
+  font-family: 'Righteous', cursive;
+  color: white;
+  font-size: 2em;
+  margin-bottom: 0em;
+}
+
+.card {
+  background-color: #ffffff;
+  color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border-radius: 15px;
+  border: 5px solid transparent;
+  font-family: 'lobster', cursive;
+  box-sizing: border-box;
+  width: 10em;
+  height: 14em;
+  margin: 1em;
+  padding: 5px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.cardValue {
+  height: 88px;
+}
+
+.cardSymbol {
+  text-align: center;
+  font-size: 4em;
+}
+
+.cardSuite {
+  height: 88px;
+}
+
+.creditsCount {
+  margin-bottom: 0;
+  color: white; 
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+  color: white;
+}
+
+.handDisplay {
+  display: flex;
+  flex-direction: row;
+  margin: 1em auto;
+  height: 16em;
+  max-width: 60em;
+}
+
+.isKept {
+  border: 5px solid gold;
+  -webkit-box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.keepIndicator {
+  color: gold;
+  margin-top: 2em;
+}
+
+.red {
+  color: red;
+}
+

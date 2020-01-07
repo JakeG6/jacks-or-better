@@ -1,0 +1,27 @@
+#scoringTable {
+    width: 95%;
+    max-width: 60em;
+    margin: 0 auto;
+    font-weight: bold;
+    border-collapse: collapse;
+    color: gold;
+    background-color: navy;
+    border: 5px solid gold;
+
+}
+
+td:nth-child(1) {
+    text-align: left;
+    padding-left: 4px;
+}
+
+td:nth-child(2) {
+    background-color: red;
+}
+
+td:nth-child(n+2) {
+    border-left: 5px solid gold;
+    text-align: right;
+    width: 100px;
+    padding-right: 4px;
+}

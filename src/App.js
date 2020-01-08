@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import { createDeck , shuffleShuffle, deal, calculateHand } from "./gameEngine";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import ScoringTable from "./components/ScoringTable/ScoringTable.js";
 import HandDisplay from "./components/HandDisplay/HandDisplay.js";
 import AddCredits from "./components/AddCredits/AddCredits.js";
@@ -86,29 +89,49 @@ function App() {
 
   return (
     <div className="App">
-      <h1>JACKS OR BETTER</h1>
-      <ScoringTable />     
-      <HandDisplay hand={gameState.hand} toggleKeptCard={toggleKeptCard} />
-      <div id="bottomRow">
-        <AddCredits increaseCredits={increaseCredits} creditsAdded={creditsAdded} />
-        <div id="betOptions">
-          <button type="button" className="betButton" disabled={ gameState.bet > 1 ? false : true } onClick={() => changeBet("-")}>-</button> 
-          <div>
-            <h3 className="betLogo">BET</h3>
-            <div className="betValue" >{ `${gameState.bet}` }</div>
-          </div>
-          <button type="button" className="betButton" disabled={ (gameState.bet < 5 && gameState.bet < gameState.credits) ? false : true } onClick={() => changeBet("+")}>+</button>
-        </div>
-        <button type="button" className="maxButton" onClick={ () => changeBet("max") }>MAX BET</button> 
-        <div>
-          <h3 className="creditsCount">{ `CREDITS: ${gameState.credits}` }</h3>
-          { gameState.handDealt ? 
-            <button type="button" onClick={ replaceCards }>REPLACE CARDS</button> 
-            : 
-            <button type="button" id="dealButton" disabled={ gameState.credits <= 0 ? true : false } onClick={startGame}>DEAL HAND</button> 
-          }  
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <h1 className="center-text">JACKS OR BETTER</h1>
+            <ScoringTable />     
+            <HandDisplay hand={gameState.hand} toggleKeptCard={toggleKeptCard} />
+            <h5 className="creditsCount">{ `CREDITS: $${gameState.credits}` }</h5>
+            <Row>
+              <Col xs={6} md={2} className="text-center center-to-bottom">
+                <AddCredits increaseCredits={increaseCredits} creditsAdded={creditsAdded} />
+              </Col>
+              <Col xs={6} md={2}>
+                <Row>
+                  <Col>
+                    <div id="betOptions">
+                      <button type="button" className="betButton" disabled={ gameState.bet > 1 ? false : true } onClick={() => changeBet("-")}>-</button> 
+                      <div>
+                        <h3 className="betLogo center-text align-bottom">BET</h3>
+                        <div className="betValue" >{ `${gameState.bet}` }</div>
+                      </div>
+                      <button type="button" className="betButton" disabled={ (gameState.bet < 5 && gameState.bet < gameState.credits) ? false : true } onClick={() => changeBet("+")}>+</button>
+                    </div>
+                    </Col>
+                </Row>  
+                <Row>
+                  <Col xs={6} md={3} >
+                    <button type="button" className="maxButton" onClick={ () => changeBet("max") }>MAX BET</button> 
+                  </Col>
+                  <Col xs={6} md={3} >
+                    <div>
+                    { gameState.handDealt ? 
+                        <button type="button"  onClick={ replaceCards }>REPLACE CARDS</button> 
+                        : 
+                        <button type="button"  id="dealButton" disabled={ gameState.credits <= 0 ? true : false } onClick={startGame}>DEAL HAND</button> 
+                      }  
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -11,17 +11,16 @@ const bold ={
 
 const AddCredits = props => {
     return (
-        <div onClick={()=> props.increaseCredits(props.creditsAdded)} style={bold}>
-            <div style={white}>
-                {`ADD ${props.creditsAdded}`}
+      
+             <div  onClick={()=> props.increaseCredits(props.creditsAdded)} style={bold}>
+                <div className="slot">
+                    <div className="slotInnerBorder">
+                    <div className="slotInnerLeft"></div>
+                    <div className="slotInnerRight">INSERT COIN</div>
+                    </div> 
+                </div>
             </div>
-            <div className="slot">
-                <div className="slotInnerBorder">
-                <div className="slotInnerLeft"></div>
-                <div className="slotInnerRight">INSERT COIN</div>
-                </div> 
-            </div>
-        </div>
+       
     )
 }
 

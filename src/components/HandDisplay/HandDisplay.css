@@ -1,0 +1,129 @@
+.card {
+    background-color: #ffffff;
+    color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    border-radius: 15px;
+    border: 5px solid transparent;
+    font-family: 'lobster', cursive;
+    box-sizing: border-box;
+    width: 10em;
+    height: 14em;
+    margin: 1em;
+    padding: 5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+  }
+  
+.card:hover {
+cursor: pointer;
+}
+
+.cardValue {
+height: 88px;
+}
+
+.cardSymbol {
+text-align: center;
+font-size: 4em;
+}
+
+.cardSuite {
+height: 88px;
+}
+
+.handDisplay {
+display: flex;
+/* flex-direction: row; */
+margin: 1em auto 0 auto;
+height: 19em;
+max-width: 60em;
+}
+
+.isKept {
+    border: 5px solid gold;
+    -webkit-box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+  
+.keepIndicator {
+    color: gold;
+    margin-top: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+    .cardValue, .cardSuite {
+        height: 44px
+    }
+
+    .card .cardSymbol {
+        text-align: center;
+        font-size: 2em !important;
+    }
+
+    .handDisplay {
+        display: flex;
+        /* flex-direction: row; */
+        margin: 1em auto 0 auto;
+        height: 9em;
+        max-width: 60em;
+        }
+
+    .keepIndicator {
+        color: gold;
+        margin-top: 1em;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    /* For Galaxy S5: */
+    .cardValue, .cardSuite {
+        height: 44px
+    }
+
+    .card .cardSymbol {
+        text-align: center;
+        font-size: 2em !important;
+    }
+    
+    .card {
+        background-color: #ffffff;
+        color: black;
+        background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+        border-radius: 15px;
+        border: 5px solid transparent;
+        font-family: 'lobster', cursive;
+        box-sizing: border-box;
+        width: 5em;
+        height: 7em;
+        margin: 1em;
+        margin-left: .5em;
+        margin-right: .5em;
+        padding: 5px;
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        
+    }
+
+    .handDisplay {
+        display: flex;
+        /* flex-direction: row; */
+        margin: 0 auto;
+        height: 9em;
+        max-width: 60em;
+        }
+
+    .keepIndicator {
+        color: gold;
+        font-size: .8em;
+    }
+
+    .isKept {
+        border: 5px solid gold;
+        -webkit-box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 0px 10px 13px -7px gold, 5px 5px 15px 5px rgba(0,0,0,0);
+    }
+}

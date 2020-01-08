@@ -1,13 +1,10 @@
 #scoringTable {
-    width: 95%;
-    max-width: 60em;
     margin: 0 auto;
     font-weight: bold;
     border-collapse: collapse;
     color: gold;
     background-color: navy;
     border: 5px solid gold;
-
 }
 
 td:nth-child(1) {
@@ -24,4 +21,16 @@ td:nth-child(n+2) {
     text-align: right;
     width: 100px;
     padding-right: 4px;
+}
+
+@media screen and (max-width: 414px) {
+    table {
+        font-size: .5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    table {
+        font-size: .8em;
+    }
 }

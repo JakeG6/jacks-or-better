@@ -1,5 +1,6 @@
 import React from 'react';
 import { suiteChecker, suiteColor, valueChecker } from '../../cardLogic.js';
+import "./HandDisplay.css";
 
   // Player's hand UI
 const HandDisplay = props => {
@@ -16,7 +17,7 @@ const HandDisplay = props => {
                     >
                     <div className={ `cardSymbol ${suiteColor(card)} cardValue`}>{valueChecker(card) }</div>
                     <div className={ `cardSymbol ${suiteColor(card)} cardSuite`}>{suiteChecker(card) }</div>
-                    { card.isKept ? <h2 className="keepIndicator">KEEP</h2> : <div></div> }        
+                    { card.isKept ? <h2 className="center-text keepIndicator">KEEP</h2> : <div></div> }        
                     </div>
                 )}
             </div>

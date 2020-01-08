@@ -17,28 +17,28 @@
   }
   
 .card:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
 .cardValue {
-height: 88px;
+    height: 88px;
 }
 
 .cardSymbol {
-text-align: center;
-font-size: 4em;
+    text-align: center;
+    font-size: 4em;
 }
 
 .cardSuite {
-height: 88px;
+    height: 88px;
 }
 
 .handDisplay {
-display: flex;
-/* flex-direction: row; */
-margin: 1em auto 0 auto;
-height: 19em;
-max-width: 60em;
+    display: flex;
+    /* flex-direction: row; */
+    margin: 1em auto 0 auto;
+    height: 16em;
+    max-width: 60em;
 }
 
 .isKept {
@@ -50,6 +50,10 @@ max-width: 60em;
 .keepIndicator {
     color: gold;
     margin-top: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    .keepIndicator {margin-top: -0.3em;}
 }
 
 @media screen and (max-width: 767px) {
@@ -75,6 +79,24 @@ max-width: 60em;
         margin-top: 1em;
         font-size: 1.25em;
     }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .card {
+        height: 7em;
+    }
+
+
+}
+
+@media screen and (min-width: 415px) {
+  
+    .handDisplay {
+        margin-bottom: 1em;
+    }
+    
 }
 
 @media screen and (max-width: 414px) {
@@ -119,6 +141,7 @@ max-width: 60em;
     .keepIndicator {
         color: gold;
         font-size: .8em;
+        margin-top: 1.5em;
     }
 
     .isKept {

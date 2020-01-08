@@ -95,14 +95,20 @@ function App() {
             <h1 className="center-text">JACKS OR BETTER</h1>
             <ScoringTable />     
             <HandDisplay hand={gameState.hand} toggleKeptCard={toggleKeptCard} />
-            <h5 className="creditsCount">{ `CREDITS: $${gameState.credits}` }</h5>
-            <Row>
-              <Col xs={6} md={2} className="text-center center-to-bottom">
-                <AddCredits increaseCredits={increaseCredits} creditsAdded={creditsAdded} />
-              </Col>
-              <Col xs={6} md={2}>
+            
+            <Row className="bottom-row">
+              <Col xs={6} sm={5} md={4} className="text-center center-to-bottom">
                 <Row>
                   <Col>
+                  <h5 className="creditsCount">{ `CREDITS: $${gameState.credits}` }</h5>
+                  <AddCredits increaseCredits={increaseCredits} credits={gameState.credits} creditsAdded={creditsAdded} />
+                  
+                  </Col>
+                </Row>
+              </Col>
+              <Col xs={6} sm={7} md={8}>
+                <Row>
+                  <Col md={12}>
                     <div id="betOptions">
                       <button type="button" className="betButton" disabled={ gameState.bet > 1 ? false : true } onClick={() => changeBet("-")}>-</button> 
                       <div>
@@ -114,15 +120,15 @@ function App() {
                     </Col>
                 </Row>  
                 <Row>
-                  <Col xs={6} md={3} >
+                  <Col xs={6} sm={6}  md={6} className="lower-button" >
                     <button type="button" className="maxButton" onClick={ () => changeBet("max") }>MAX BET</button> 
                   </Col>
-                  <Col xs={6} md={3} >
+                  <Col xs={6} sm={6} md={6} className="lower-button">
                     <div>
                     { gameState.handDealt ? 
-                        <button type="button"  onClick={ replaceCards }>REPLACE CARDS</button> 
+                        <button type="button" className="text-center"  onClick={ replaceCards }>REPLACE CARDS</button> 
                         : 
-                        <button type="button"  id="dealButton" disabled={ gameState.credits <= 0 ? true : false } onClick={startGame}>DEAL HAND</button> 
+                        <button type="button" className="text-center"  id="dealButton" disabled={ gameState.credits <= 0 ? true : false } onClick={startGame}>DEAL HAND</button> 
                       }  
                     </div>
                   </Col>
